@@ -61,6 +61,7 @@ export class GameScene extends Phaser.Scene {
 
         const rounds = Phaser.Math.Between(4, 6);
         const degrees = Phaser.Math.Between(0, 360);
+        const totalDegrees = 360 * rounds + degrees;
         const prizeIndex = GameConstants.SLICES - 1 - Math.floor(degrees / (360 / GameConstants.SLICES));
         const prize = GameConstants.PRIZES[prizeIndex];
         this.spinning = true;
@@ -69,8 +70,8 @@ export class GameScene extends Phaser.Scene {
 
         this.tweens.add({
             targets: [this.wheel],
-            angle: 360 * rounds + degrees,
-            duration: GameConstants.ROTATION_ANIMATION_DURATION,
+            angle: totalDegrees,
+            duration: totalDegrees * GameConstants.ROTATION_DURATION_PER_DEGREE,
             ease: 'Cubic.easeOut',
             callbackScope: this,
             onComplete: (tween) => {

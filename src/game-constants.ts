@@ -17,5 +17,5 @@ export class GameConstants {
 
     static readonly SLICES = GameConstants.PRIZES.length;
 
-    static readonly ROTATION_ANIMATION_DURATION = 4000;
+    static readonly ROTATION_DURATION_PER_DEGREE = 4;
 }

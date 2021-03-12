@@ -11,11 +11,7 @@ const config: Phaser.Types.Core.GameConfig = {
     scene: [GameScene],
 };
 
-export class Game extends Phaser.Game {
-    constructor(config) {
-        super(config);
-    }
-}
+export class Game extends Phaser.Game {}
 
 window.onload = () => {
     const game = new Game(config);
