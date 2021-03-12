@@ -4,9 +4,18 @@ export class GameConstants {
 
     static readonly BACKGROUND_COLOR = 0xeeeeee;
 
-    static readonly PRIZES = ['KEY', '50', '500', 'TRY AGAIN', '200', '100', '150', 'TRY AGAIN'];
+    static readonly PRIZES = [
+        'KEY',
+        '50 STARS',
+        '500 STARS',
+        'PLEASE TRY AGAIN',
+        '200 STARS',
+        '100 STARS',
+        '150 STARS',
+        'PLEASE TRY AGAIN',
+    ];
 
     static readonly SLICES = GameConstants.PRIZES.length;
 
-    static readonly ROTATION_ANIMATION_DURATION = 3000;
+    static readonly ROTATION_ANIMATION_DURATION = 4000;
 }
